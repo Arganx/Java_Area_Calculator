@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        boolean still =true;
+        //boolean still =true;
         double a,b,c;
         Scanner scanner;
-        while(still) {
+        while(true) {
             System.out.println("Kalkulator pol i obwodow figur\n1) Kwadrat\n2) Trojkat\n3) Kolo\nAby zakonczyc nacisnij dowolny klawisz");
            scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
@@ -28,10 +28,10 @@ public class Main {
                             choice = scanner.nextInt();
                             switch (choice) {
                                 case 1:
-                                    System.out.println(kwadrat.calculateArea());;
+                                    System.out.println(kwadrat.calculateArea());
                                     break;
                                 case 2:
-                                    System.out.println(kwadrat.calculatePerimeter());;
+                                    System.out.println(kwadrat.calculatePerimeter());
                                     break;
                                 case 3:
                                     kwadrat.print();
@@ -43,7 +43,6 @@ public class Main {
                     }catch (ArithmeticException exep)
                     {
                         System.out.println("Wymiary kwadratu musza byc dodatnie");
-                        //System.exit(1);
                     }
                     break;
                 case 2:
@@ -64,10 +63,10 @@ public class Main {
                             choice = scanner.nextInt();
                             switch (choice) {
                                 case 1:
-                                    System.out.println(trojkat.calculateArea());;
+                                    System.out.println(trojkat.calculateArea());
                                     break;
                                 case 2:
-                                    System.out.println(trojkat.calculatePerimeter());;
+                                    System.out.println(trojkat.calculatePerimeter());
                                     break;
                                 case 3:
                                     trojkat.print();
@@ -86,7 +85,6 @@ public class Main {
                     System.out.println("Podaj promien kola");
                     scanner = new Scanner(System.in);
                     a = scanner.nextDouble();
-                    scanner = new Scanner(System.in);
                     try {
                         Circle kolo = new Circle(a);
                         boolean cos = true;
@@ -96,10 +94,10 @@ public class Main {
                             choice = scanner.nextInt();
                             switch (choice) {
                                 case 1:
-                                    System.out.println(kolo.calculateArea());;
+                                    System.out.println(kolo.calculateArea());
                                     break;
                                 case 2:
-                                    System.out.println(kolo.calculatePerimeter());;
+                                    System.out.println(kolo.calculatePerimeter());
                                     break;
                                 case 3:
                                     kolo.print();
